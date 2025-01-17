@@ -34,7 +34,7 @@ class FindBestMatchAPIView(APIView):
             cleaned_key = clean_text(subject.key)
             similarity = get_similarity(query_key, cleaned_key)
 
-            # 65% va undan yuqori o'xshashlikni tekshirish
+            # 60% va undan yuqori o'xshashlikni tekshirish
             if similarity > 60 and similarity > highest_similarity:
                 highest_similarity = similarity
                 best_match = subject
